@@ -264,6 +264,7 @@ const styles = StyleSheet.create({
   },
   madLibVar: {
     textDecorationLine: 'underline',
+    fontStyle: 'italic',
     fontSize: 25,
     margin: 15,
     lineHeight: 60,
