@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { ImageBackground, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ImageBackground, Keyboard, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +46,10 @@ const getCurrentDate = () => {
   var year = new Date().getFullYear();
   return date + '.' + month + '.' + year;
 }
+// dismiss the keyboard on background press
+const dismissKeyboard = () => {
+  Keyboard.dismiss();
+}
 
 // First Page: The text entry
 const HomeScreen = ({navigation}) => {
@@ -55,7 +59,7 @@ const HomeScreen = ({navigation}) => {
   const [event, onChangeEvent] = React.useState('');
 
   return(
-    <View style={styles.container}>
+    <Pressable style={styles.container} onPress={dismissKeyboard}>
       {/* Display the instructions */}
       <View>
         <Text style={styles.inst}>{instruct}</Text>
@@ -111,7 +115,7 @@ const HomeScreen = ({navigation}) => {
           </View>
         </Pressable>
       </View>
-    </View>
+    </Pressable>
   );
 };
 
