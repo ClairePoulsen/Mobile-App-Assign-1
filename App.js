@@ -284,6 +284,7 @@ const styles = StyleSheet.create({
   signatureText: {
     fontSize: 20,
     marginLeft: 5,
+    fontStyle: 'italic',
   },
   image: {
     flex: 1,
