@@ -59,6 +59,9 @@ const HomeScreen = ({navigation}) => {
   const [name, onChangeName] = React.useState('');
   const [noun, onChangeNoun] = React.useState('');
   const [event, onChangeEvent] = React.useState('');
+  const [nameHint] = React.useState('Name');
+  const [nounHint] = React.useState('Noun');
+  const [eventHint] = React.useState('An Event');
 
   return(
     <Pressable style={styles.container} onPress={dismissKeyboard}>
@@ -73,7 +76,7 @@ const HomeScreen = ({navigation}) => {
           style={styles.input}
           onChangeText={onChangeName}
           value={name}
-          placeholder={'Name'}
+          placeholder={nameHint}
         />
       </View>
       <View>
@@ -81,7 +84,7 @@ const HomeScreen = ({navigation}) => {
           style={styles.input}
           onChangeText={onChangeNoun}
           value={noun}
-          placeholder={'Noun'}
+          placeholder={nounHint}
         />
       </View>
       <View>
@@ -89,7 +92,7 @@ const HomeScreen = ({navigation}) => {
           style={styles.input}
           onChangeText={onChangeEvent}
           value={event}
-          placeholder={'An Event'}
+          placeholder={eventHint}
         />
       </View>
 
