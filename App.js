@@ -33,7 +33,9 @@ export default function App() {
 };
 
 // Instructions to display
-const instruct = 'This is a fill in the blank game, where you are given prompts on what type of word to fill in.\n\nFill in the three fields with the proper word type, and press the "Make Hall Pass" button.\n\nFrom there, let hilarity ensue.';
+const instruct = 'This is a fill in the blank game, where you are given prompts on what type of word to fill in.\n\n' + 
+'Fill in the three fields with the proper word type, and press the "Make Hall Pass" button.\n\n' + 
+'From there, let hilarity ensue.';
 
 // picture for top left
 const squarePic = {uri: 'https://i1.wp.com/www.equinoxpub.com/blog/wp-content/uploads/2014/03/MadLibsIT.jpg'};
