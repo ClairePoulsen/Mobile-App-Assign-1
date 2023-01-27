@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
     fontSize: 80,
     textAlign: 'center',
     fontWeight: 'bold',
-    fontFamily: 'serif',
+    fontFamily: 'serif', // Why the f does apple not recognize this?
   },
   mainBody: {
     width: '70%',
